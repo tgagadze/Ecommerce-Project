@@ -1,0 +1,55 @@
+.products {
+    display: flex;
+    padding: 20px 100px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.product {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    margin-bottom: 20px;
+    height: auto;
+    padding: 3px;
+}
+.sale {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    top: 30px;
+    left: 0;
+    background: red;
+    border-radius: 0 8px 8px 0;
+
+}
+.discound {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    top: 30px;
+    right: 0;
+    background: red;
+}
+.oldprice{
+    text-decoration: line-through;
+}
+.btnBuy{
+    background: yellow;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+}
+.btnBuy:hover{
+    color: rgb(11, 92, 129);
+    text-decoration: none;
+}
+body{
+    background: rgb(245, 244, 244);
+}
