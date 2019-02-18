@@ -101,26 +101,26 @@
         }
 
         document.getElementById('updateBtn').addEventListener('click', updateProduct);
-        
-        function updateProduct(){
+
+        function updateProduct() {
             let id = document.getElementById('productId').value;
             let oldPrice = document.getElementById('oldPrice').value;
             let currentPrice = document.getElementById('newPrice').value;
             const url = `${location.href}/${id}`;
-            if(id != "" || newPrice != ""){
-                fetch(url,{
+            if (id != "" || newPrice != "") {
+                fetch(url, {
                     method: "PATCH",
-                    headers:{
+                    headers: {
                         'Content-Type': "Application/json"
                     },
-                    body:JSON.stringify({updateDetails:{oldPrice,currentPrice}})
+                    body: JSON.stringify({ updateDetails: { oldPrice, currentPrice } })
                 })
-                .then(res=>res.json())
-                .then(response=>{
-                    location.href='http://localhost:3000/products/add'
-                    alert(response.message);
-                })
-                .catch(error=>console.log(error))
+                    .then(res => res.json())
+                    .then(response => {
+                        location.href = 'http://localhost:3000/products/add'
+                        alert(response.message);
+                    })
+                    .catch(error => console.log(error))
             }
         }
 
